@@ -15,15 +15,26 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.grey[300],
           body: Center(
             child: Container(
-              child: Text('Code'),
+              child: Text("Salami"),
               padding: const EdgeInsets.all(50),
               decoration: BoxDecoration(
-                  color: Colors.blue[300],
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
+                    // Bottom right has darker shadow
                     BoxShadow(
-                      color: Colors.grey.shade600,
-                      offset: const Offset(5, 5),
+                      color: Colors.grey.shade500,
+                      offset: const Offset(4, 4),
+                      blurRadius: 15,
+                      spreadRadius: 1,
+                    ),
+
+                    // top left has ligher shadow
+                    const BoxShadow(
+                      color: Colors.white,
+                      offset: Offset(-4, -4),
+                      blurRadius: 15,
+                      spreadRadius: 1,
                     ),
                   ]),
             ),
